@@ -1,0 +1,30 @@
+@import "../../../common.scss";
+
+.loader {
+  margin: 1rem auto;
+  font-size: 10px;
+  text-indent: -9999em;
+  border-top: 1.1em solid $loader-color;
+  border-right: 1.1em solid $loader-color;
+  border-bottom: 1.1em solid $loader-color;
+  border-left: 1.1em solid $loader-color-main;
+  transform: translateZ(0);
+  animation: rotate 1.1s infinite linear;
+  bottom: 0;
+  @extend %popup;
+}
+
+.loader,
+.loader:after {
+  border-radius: 50%;
+  width: 10em;
+  height: 10em;
+}
+@keyframes rotate {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}

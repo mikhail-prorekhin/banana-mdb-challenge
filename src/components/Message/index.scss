@@ -1,0 +1,34 @@
+@import "../../common.scss";
+
+.message {
+  @extend %popup;
+  background-color: $message-color;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  z-index: 20;
+}
+
+.message-appear {
+  top: -3.5rem;
+}
+
+.message-appear.message-appear-active {
+  transform: translate(0, 3.5rem);
+  transition-duration: 1000ms;
+}
+
+.message-content {
+  flex: 1 1;
+  text-align: center;
+}
+
+.message button {
+  height: 2rem;
+  flex: 0 0 2rem;
+  background-repeat: no-repeat;
+  background-color: transparent;
+  border-color: transparent;
+  background-position: center;
+  background-size: contain;
+}

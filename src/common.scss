@@ -1,0 +1,25 @@
+$dark-color: #333;
+$white-color: #eceff1;
+$message-color: rgb(228, 145, 43);
+$loader-color-main: rgb(228, 145, 43);
+$loader-color: rgba(228, 145, 43, 0.2);
+$shadov-small: rgba(255, 0, 0, 0.5);
+
+$mobile-size: 768px;
+$up-mobile-size: calc(#{$mobile-size} + 1px);
+%popup {
+  width: 100%;
+  position: fixed;
+  left: 0;
+  right: 0;
+}
+
+%input-small {
+  outline: none !important;
+  box-shadow: 0 0 0.5rem 0.5rem $shadov-small;
+}
+
+%input-normal {
+  outline: none !important;
+  box-shadow: 0 0 0.5rem 0.5rem $shadov-small;
+}

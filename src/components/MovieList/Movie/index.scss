@@ -1,0 +1,120 @@
+@import "../../../common.scss";
+
+.movie {
+  width: 40vmin;
+  height: 80vmin;
+  padding: 1rem;
+}
+
+.movie__button:focus {
+  @extend %input-normal;
+}
+
+.movie__button {
+  width: 100%;
+  height: 100%;
+  border: 0;
+  padding: 0;
+  background-color: transparent;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+}
+
+@media (max-width: $mobile-size) {
+  .movie-appear-active {
+    z-index: 1;
+    position: fixed;
+    top: 10%;
+    bottom: 10%;
+    left: 10%;
+    right: 10%;
+    background: $white-color;
+    width: 80%;
+    height: 80%;
+    transition-duration: 500ms;
+
+    .movie__title,
+    .movie__year {
+      font-size: 1.1rem;
+    }
+    .movie__brif-info {
+        .movie__title {
+            white-space: unset;
+        }
+      }
+  }
+  .movie__brif-info {
+    font-size: 2rem;
+  }
+
+}
+
+@media (min-width: $up-mobile-size) {
+  .movie {
+    width: 10rem;
+    height: 15rem;
+    padding: 1rem;
+  }
+  .movie__button:focus {
+    overflow: hidden;
+    .movie__pict {
+      transform: scale(2);
+      opacity: 0.1;
+      transition: all 1s;
+    }
+    .movie__info {
+      visibility: visible;
+      transition: all 1s;
+    }
+    .movie__brif-info {
+      display: none;
+    }
+  }
+}
+.movie__pict {
+  background-color: transparent;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+  border: 0;
+  padding: 0;
+  transition: all 1s;
+  flex: 1 1 80%;
+}
+
+.movie__info {
+  visibility: hidden;
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  .movie__title,
+  .movie__year {
+    font-size: 1rem;
+  }
+}
+
+.movie__brif-info {
+  flex: 0 0 20%;
+  .movie__title {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+  strong {
+    background-color: $dark-color;
+    color: $white-color;
+  }
+}
+
+.movie__title,
+.movie__year {
+  color: $dark-color;
+  font-size: 0.7rem;
+  margin: 0.15rem 0;
+  font-weight: 700;
+  font-family: sans-serif;
+}

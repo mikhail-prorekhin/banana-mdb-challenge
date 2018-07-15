@@ -1,0 +1,17 @@
+@import "../../common.scss";
+
+.movie-list {
+  height: 100%;
+  overflow-y: scroll;
+  box-sizing: border-box;
+  overflow-x: hidden;
+  background-color: $white-color;
+}
+.movie-list__scroll-wrap {
+  display: flex;
+  width: 100%;
+  margin: 0 auto;
+  flex-wrap: wrap;
+  background-color: $white-color;
+  justify-content: space-around;
+}
