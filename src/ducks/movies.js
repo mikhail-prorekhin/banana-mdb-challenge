@@ -133,7 +133,7 @@ export const searchSaga = function*() {
 
 export async function fetchRecords(apiKey, search, page) {
   const apiResponse = await fetch(
-    `http://www.omdbapi.com/?&apikey=${apiKey}&s=${search}*&page=${page}`
+    `https://www.omdbapi.com/?&apikey=${apiKey}&s=${search}*&page=${page}`
   );
   return await apiResponse.json();
 }

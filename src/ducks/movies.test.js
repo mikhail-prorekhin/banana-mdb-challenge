@@ -2,7 +2,6 @@ import reducer, {
   ReducerRecord,
   MovieRecord,
   fetchLazySaga,
-  CLEAR_ERROR,
   FETCH_PAGE_ERROR,
   FETCH_PAGE_SUCCESS,
   FETCH_PAGE_START,
@@ -11,28 +10,9 @@ import reducer, {
   SEARCH_REQUEST,
   fetchRecords
 } from "./movies";
-import { Record, List } from "immutable";
-import { put, call, take, select, all } from "redux-saga/effects";
+import { List } from "immutable";
+import { put, call, take } from "redux-saga/effects";
 import { apiKey } from "../config";
-
-function getApiRecords() {
-  return [
-    {
-      imdbID: "tt0112950",
-      Title: "Empire Records",
-      Year: "1995",
-      Poster: "https://ia.media-imdb.com/images/M/MV5SX300.jpg",
-      Type: "movie"
-    },
-    {
-      imdbID: "tt1042877",
-      Title: "Cadillac Records",
-      Year: "2008",
-      Poster: "https://m.media-amazon.com/images/M/1_SX300.jpg",
-      Type: "movie"
-    }
-  ];
-}
 
 function getImmutableRecords() {
   return [
